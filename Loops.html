@@ -1,0 +1,34 @@
+// for ..of loop
+
+//ES6 introduces a new for -of loop which allows us to iterate over arrays or other iterate object(e.g. String) very easily
+/*
+for(variable of iterableobject){
+    //code to be execute
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+</head>
+<body>
+    <h1>For- of loop</h1>
+    <script>
+        let arr =["ABC","XYZ","LMN"];
+        console.log(arr);
+        for(let item of arr){
+            console.log(item);
+        }
+        // for-of loop are not use for object
+
+
+
+        for(let item in arr){
+            console.log(item) ;
+            console.log(arr[item]);
+          }
+    </script>
+</body>
+</html>

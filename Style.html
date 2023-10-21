@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Styling</title>
+</head>
+<body>
+    <button onclick="changeStyle()">Change Style</button>
+
+    <button onclick="getStyle()">Get Information</button>
+
+    <h2 id="main">LearnCodeWith Durgesh</h2>
+    <h2 id="sub">YouTube Channel</h2>
+    <h2 id="subsub">For Programming vidoes subscribe my YouTube channel..</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, tenetur nemo pariatur amet doloribus dolores inventore voluptates, voluptatem delectus earum nobis enim facilis id cupiditate voluptas nostrum eum distinctio soluta.</p>
+    <script>
+
+        //select the element
+        let mainOb = document.getElementById("main");
+
+        //applying style on thne element
+        const changeStyle = () => {
+        mainOb.style.color = "blue";
+        mainOb.style.fontSize = "50px";
+        mainOb.style.border = "1px solid orange";
+        mainOb.style.padding = "20px";
+        mainOb.style.background = "skyblue";
+
+        document.body.style.background = "black";
+        document.body.style.color = "white";
+
+        };
+
+        const getStyle = () => {
+            // console.log(mainOb.style.color);
+            // console.log(mainOb.style.fontSize);
+            // console.log(mainOb.style.padding);
+
+        let style = window.getComputedStyle(mainOb);
+        console.log(style.getPropertyValue("color"));
+        }
+        
+    </script>
+</body>
+</html>

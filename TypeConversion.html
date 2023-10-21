@@ -1,0 +1,82 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Type conversion in JavaScript...</h1>
+    
+    <script>
+        // Type Conversion
+        let n = 12;
+        console.log(n);
+
+        //String Conversion
+        //String Function
+
+       // let as =String(n);
+        //console.log(as);
+        //console.log(typeof as);
+        //console.log(as.length);
+
+
+        //toString Function
+       console.log(n.toString());
+        //console.log(a.length);
+        console.log(String(false));
+
+        //numeric Conversion
+        let value  = "1224";
+        console.log(value + 5);
+
+        let values = Number(value);
+        console.log(values +5);
+
+        let f1 = "34523.234";
+        let f2 = Number(f1);
+        console.log(f2);
+        console.log(typeof f2);
+
+
+        //parseint
+        //parseFloat
+        let pint = parseInt(value);
+        console.log(pint);
+        console.log(typeof pint);
+
+        console.log(parseFloat(f1));
+        console.log(typeof f1);
+
+        /*
+        undefined => NaN
+        null => 0
+        true => 1
+        false => 0
+
+        */
+       console.log(Number(false));
+       console.log(Number(true));
+       console.log(Number(undefined));
+       console.log(Number(null));
+
+       //Boolean Conversion
+
+       let ex="false";
+       console.log(typeof ex);
+       let exb = Boolean(ex);
+       console.log(exb);
+       console.log(typeof exb);
+
+
+
+
+
+
+    
+
+    </script>
+</body>
+</html>

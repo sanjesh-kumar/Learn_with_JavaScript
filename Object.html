@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Learn about Object</h1>
+    
+    <script>
+        /*
+    //1_JavaScript is an object - based language.
+    //2_A JavaScript object is just a collection of key value pairs
+    {Key:Value}
+    {Key1:Value,Key2:Values}
+    */
+
+    /*
+    Create an object
+    {
+        Name:"sanju",
+        phone:5662,
+        Address:'lkji'
+    }
+    */
+    // Object can also have fuctions inside
+    /*
+    {
+        name:"sanjesh",
+        phone:954962,
+        Address:'jdiuer',
+        display:function()
+                {
+                    console.log(this.name);
+                }
+    } 
+    */
+    //Accessing the valuess
+    //object.key or Object[key]
+
+       let ob= {
+            name:"Mohan",
+            age:23,
+            Address:"Rooppur",
+            lastName:"Kumar",
+            display: function(){
+                console.log("display properties..");
+                console.log(this.name);
+                console.log(this.lastName);
+            },
+        };
+        // for in
+        for(let key in ob){
+            console.log(key + " " +ob[key]);
+
+        }
+         
+        //ob.display();
+        ob["display"]();
+    //     console.log(ob);
+    //     // Accessing the Key values
+    //     console.log(ob.name);
+    //     console.log(ob["name"]);
+    //     ob.display();
+
+    //Changing value of properties
+    ob.name="john";
+    console.log(ob.name);
+    console.log(ob);
+    ob["lastName"] ="singh";
+    console.log(ob.lastName);
+
+    // to add properties dynamicaly
+    ob["email"]= "sanjeshkumarmpi@gmail.com";
+    console.log(ob.email);
+    console.log(ob);
+
+
+    //to delete properties
+    delete ob["lastName"];
+   // delete(ob.lastName);
+    console.log(ob);
+    </script>
+
+    
+
+</body>
+</html>

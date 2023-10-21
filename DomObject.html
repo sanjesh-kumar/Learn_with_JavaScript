@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selector</title>
+</head>
+<body>
+    <h1>DOM Selector</h1>
+
+    <h1 class="myclass">hello world.</h1>
+    <h1 class="myclass">hello world..</h1>
+    <h1 class="myclass">hello world...</h1>
+
+    <h2 id="banner">Learn with Durgesh..</h2>
+
+    <script>
+        console.log("inside body");
+        // to select top document like html ,head ,body
+       // let ht = document.documentElement;
+       // console.log(ht);
+
+        let he = document.head;
+        let bo = document.body;
+       // console.log(he);
+        //console.log(bo);
+
+        //to select title
+        let ti = document.title;
+        //console.log(ti);
+
+        //Select Elements by Id
+        /*
+        getElementById()-return single
+
+         let h2= document.getElementById("banner");
+          console.log(h2);
+        
+             h2.innerHTML ="learn with sanjesh";
+            h2.style.color = "white";
+            h2.style.backgroundColor = "blue";
+             h2.innerHTML = "change text";
+        */
+
+        //Selecting element by class 
+        /*
+            getElementsByClassName(classname)
+        */
+        let b = document.getElementsByClassName("myclass");
+        console.log(b);
+        console.log(typeof b);
+        for(let element of b){
+            console.log(element);
+            element.style.color ="white";
+            element.style.backgroundColor ="blue";
+        }
+
+        //Selecting element with the help of css selector
+        /*
+        querySelector => return single element
+        querySelectorAll => return list of element
+
+        */
+       let els = document.querySelectorAll(".myclass");
+       console.log(els);
+
+
+       for(let e of els){
+        console.log(e);
+        //e.style.color = "blue";
+       }
+
+
+    </script>
+</body>
+</html>

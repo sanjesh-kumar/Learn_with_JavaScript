@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Navigation</title>
+</head>
+<body>
+    <!-- Agar hume ek Node pta ho to Navigation kar sakte hai to uska child  childsibling nikal sakte hai -->
+    <div id="container">
+        <h1 id="title"> we are learning JavaScript</h1>
+        <p id="content">
+            <span>JavaScript is one of the most popular programming language for front end as well as backend</span>
+        </p>
+        <h2>subscribe for more vidoes</h2>
+
+    </div>
+    <script>
+
+        //javascript code goes here
+        let containerOb = document.getElementById("container");
+        console.log(containerOb);
+        // finding child id or class
+
+        console.log(containerOb.firstChild.nodeName); // ye line break ko as a text consider karta hai is liye text child deta hai
+        console.log(containerOb.firstElementChild.nodeName); // ye tag return karega jese h1 tag
+        let firstChild = containerOb.firstElementChild;
+        console.log(firstChild);
+        firstChild.innerHTML = "Hi ' Going to change";
+
+        //----------------------------------------------last child
+
+        let lastChild = containerOb.lastElementChild;
+        lastChild.style.backgroundColor = 'red';
+        lastChild.style.color = 'white';
+
+        //--------------------------------child
+
+        let nodes = containerOb.children;
+        // let nodes = containerOb.childNodes;  // ye sare child node ki list deta hai
+        for(let n of nodes){
+            console.log(n.nodeName);
+        }
+
+        //-----------------------parentNode
+        let parentNode = containerOb.parentNode;
+        console.log(parentNode.nodeName);
+
+        //previousSibling and nextSibling
+        let titleOb = document.getElementById("title");
+        // let nextS = titleOb.nextSibling;   ye text element dega
+         let nextS = titleOb.nextElementSibling; // ye p tag dega
+         console.log(nextS.nodeName);
+         console.log(nextS.nextElementSibling.nodeName); // ye h2 dega 
+         
+
+    </script>
+</body>
+</html>

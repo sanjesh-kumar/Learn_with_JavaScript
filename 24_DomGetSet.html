@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Get And Set</title>
+</head>
+<body>
+    <h1>How to Set And Get Attributes in JavaScript..</h1>
+    <a href="https://www.google.com">Google</a>
+    <button id="url" onclick="getAtt">Get</button>
+    <button onclick="setAtt">Set</button>
+    <script>
+
+        //How to Get the Attributes
+        /*
+        Value = getAttribute(attribute)
+        */
+       const getAtt =() =>{
+        // get the Attribute
+        let urlOb = document.getElementById("url");
+        let h = urlOb.getAttribute("href");
+        console.log(h);
+        console.log(urlOb.getAnimations("id"));
+       };
+       // How to set the Attributes
+       /*
+       setAttribute('attr','value')
+       */
+      const setAtt =() =>{
+        let urlOb = document.getElementById("url");
+        urlOb.setAttribute("href", "https://www.yahoo.com")
+      };
+
+    </script>
+</body>
+</html>

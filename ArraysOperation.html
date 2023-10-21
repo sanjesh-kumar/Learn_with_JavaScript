@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array's operation</title>
+</head>
+<body>
+    <h1>Arrays operation in JavaScript</h1>
+    <script>
+        let arr =["sanjesh","abhishek","praveen","saurabh"];
+        console.log(arr);
+        console.log(typeof arr);
+
+        console.log(arr.length);
+
+
+        //Array access using index
+        console.log(arr[0]);
+        console.log(arr[3]);
+
+        // Loop over an array
+        //forEach
+
+        arr.forEach(function(item ,index){
+            console.log(index, "=>",item);
+        }
+        )
+
+        let nums =[10,20,30,42];
+        let sum =0;
+        nums.forEach(function(itm, i){
+            //this is fuction body
+            sum =sum +itm;
+        });
+        console.log("sum" ,sum);
+
+        //Adding element at last
+        arr.push("kundan");
+        console.log(arr);
+
+        // Remove element at last
+        let r =arr.pop()
+        console.log(r);
+        console.log(arr);
+        console.log(arr.pop());
+        console.log(arr);
+
+        //remove element at beginning
+        let b =console.log(arr.shift());
+        console.log(arr);
+
+        // add element at front end
+        let af =console.log(arr.unshift("Aman"));
+        console.log(arr);
+        
+        // find position index in the Arrays
+        let pos = arr.indexOf("praveen");
+        console.log(pos);
+
+        //Remove element from any position
+        //using splice
+        //splice(pos ,n)
+        let s=arr.splice(1,1);
+        console.log(s);
+        console.log(arr);
+
+        // Coppy and Array
+        //slice
+         
+         
+    </script>
+</body>
+</html>

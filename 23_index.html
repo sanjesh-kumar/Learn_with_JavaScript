@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Styling</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <button onclick="changeStyle()">change Style</button>
+
+    <button onclick="getInfo()">get information</button>
+
+    <h2 id="main">This is heading learn with durgesh</h2>
+    <h2 id="sub">youTube chennel </h2>
+    <h2 id="subsub">For programming videos Subscribes</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam fugit corporis 
+        temporibus at est voluptatum omnis. Ratione, iure? Sapiente perferendis iusto nihil numquam 
+        doloribus aliquam perspiciatis nisi quis doloremque, quasi facilis. Pariatur, eaque? Sapiente
+         voluptate quia corrupti minima, deleniti, nisi enim eligendi, dolorum eveniet laudantium 
+         repellendus? Ut molestiae ipsum officiis repudiandae ratione sint possimus dolore unde aliquid aut
+          accusantium eos optio natus temporibus praesentium quia corporis, enim dolorum! Autem ullam facere 
+          ratione delectus doloribus nostrum quam soluta ducimus magnam recusandae, eum rerum maiores, enim 
+          harum voluptatibus laudantium tenetur quibusdam illum. Perferendis quos distinctio excepturi vel
+           molestias, vero nulla doloremque suscipit voluptatum necessitatibus aperiam aspernatur culpa.
+            Vitae atque earum ullam? Eveniet, error eligendi mollitia vitae deleniti facilis autem officia 
+            repellendus rerum repellat sequi laborum nostrum porro veniam. Iste excepturi, eaque sunt 
+            expedita amet corrupti maxime voluptatum a ut? Adipisci similique, aperiam rerum quidem, magni 
+            ipsam eius nobis dicta doloribus distinctio dolorum eveniet minus laboriosam nesciunt, eum labore provident quod impedit architecto optio deleniti? Corrupti dignissimos nesciunt itaque id provident ratione fuga maiores voluptates iusto! Maxime veritatis quasi eligendi, eum incidunt voluptas nam officia sed ad enim cumque, soluta animi.
+             Sed nisi ab, illum et quaerat sapiente repellendus. Ullam repudiandae nihil iure.</p>
+    <script>
+        // select the element
+        let mainOb = document.getElementById("main")
+
+        // applying style on element
+        const changeStyle = () =>{
+             mainOb.style.color = "green"
+             mainOb.style.backgroundColor = "skyblue"
+             mainOb.style.fontSize = "30px"
+             mainOb.style.padding = "20px"
+             mainOb.style.borderRadius = "20px"
+
+             document.body.style.backgroundColor = "brown"
+            //  document.body.style.color = "white"
+        };
+
+        // get information 
+        const getInfo = () => {
+        //     console.log(mainOb.style.color);
+        //     console.log(mainOb.style.borderRadius);
+        //     console.log(mainOb.style.padding);
+
+            let styles = window.getComputedStyle(mainOb) // iski help se hum bo bhi get kar sakte hai jo set nhi kari hoti hai
+            console.log(styles.getPropertyValue("color"));
+        };
+        
+    </script>
+</body>
+</html>

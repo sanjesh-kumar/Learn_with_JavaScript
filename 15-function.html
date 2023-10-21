@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function
+    </title>
+</head>
+<body>
+    <h1>Learning with function in js</h1>
+    <script>
+        //how to create fuction
+
+        function sayHello(){
+
+            //here we write task
+            console.log("Hello..");
+            console.log("how are you?");
+            console.log("what are doing");
+        }
+        //function with argument and return type
+        //formal parameter
+
+        function doSum(a,b){
+            let c = a+b;
+            return c;
+        }
+        console.log("first line");
+        console.log("Second line");
+        sayHello();
+        console.log("mid line");
+        sayHello();
+
+        //actual parameter
+        let result = doSum(234,343);
+        console.log(result);
+
+        //why ?
+        //code reusability
+
+
+        //arrow function
+        const toCelsius =(fahrenheiet) => {
+            let result = (5 / 9) * (fahrenheiet - 32)
+            return result;
+        }
+        let c =toCelsius(102);
+        console.log(c);
+        /*
+        Arrow function with empty
+        () =>{
+
+        }
+        */
+
+
+
+    </script>
+
+</body>
+</html>
